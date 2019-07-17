@@ -16,7 +16,7 @@ namespace WebApplication4.Models
 
         public static List<UsuarioModel> consultar()
         {
-            var conexion = new SqlConnection(@"Data Source=INSPIRON5447\MSSQLSERVER02;Initial Catalog=dbMVC;Integrated Security=True;Pooling=False");
+            var conexion = new SqlConnection(@"Data Source=taxiserve.database.windows.net;Initial Catalog=dbMVC;User ID=hakenprog;Password=605312653Dd.;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             conexion.Open();
             List<UsuarioModel> listModel = new List<UsuarioModel>();
             string sql = "SELECT Nombre, Apellido, NumTelf, Marca, Modelo FROM usuarios inner join " +
